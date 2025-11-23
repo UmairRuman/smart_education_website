@@ -1,0 +1,24 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "concepts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "gradeLevel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "sequenceOrder",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ],
+      "density": "SPARSE_ALL"
+    }
+  ],
+  "fieldOverrides": []
+}

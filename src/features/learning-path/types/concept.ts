@@ -1,4 +1,7 @@
-// src/features/learning-path/types/concept.ts
+
+// ============================================================
+// FILE 1: src/features/learning-path/types/concept.ts - FIXED TYPO
+// ============================================================
 export interface PracticeQuiz {
   questionId: string;
   type: "multiple_choice" | "fill_in_the_blank" | "short_answer";
@@ -9,9 +12,10 @@ export interface PracticeQuiz {
 }
 
 export interface Content {
-  introduction: string;
+  introduction?: string;  // Made optional
   definition?: string;
-  examples?: any[];
+  examples?: any[];  // This is CORRECT (plural)
+  example?: string;  // Add this for single example field
   forms?: any[];
   membership_symbols?: string;
   cardinality?: string;
@@ -23,6 +27,7 @@ export interface Content {
   operations?: any[];
   laws?: any[];
   formula?: string;
+  properties?: any[];  // Fixed: was missing ?
 }
 
 export interface LocalizedContent {
@@ -37,6 +42,9 @@ export interface Concept {
   gradeLevel: number;
   sequenceOrder: number;
   topic: string;
+  estimatedTimeMinutes?: number;  // Made optional
+  difficulty?: string;  // Add this
+  prerequisites?: string[];  // Add this
   localizedContent: {
     en: LocalizedContent;
     ur: LocalizedContent;
